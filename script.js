@@ -11,13 +11,13 @@ loadPost = () =>{
     const url = "https://jsonplaceholder.typicode.com/posts"
     fetch(url)
       .then((res) => res.json())
-      .then((json) => {
-         console.log(json);
-        displayPost(json);
+      .then((data) => {
+         console.log(url);
+        displayPosts(data);
       });
 }
 
-const displayPost = (posts) =>{
+const displayPosts = (posts) =>{
    posts.forEach(post=>{
      console.log(post);
    })
